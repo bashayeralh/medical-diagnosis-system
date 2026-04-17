@@ -134,7 +134,7 @@ diagnose(Symptoms) :-
     findall(
         Score-Disease-MW-TW-MC-TC,
         (disease_score(Symptoms, Disease, Score, MW, TW, MC, TC),
-         Score >= 0.45),   % remove disease that have low score
+         Score >= 0.60),   % remove disease that have low score
         Results
     ),
     sort(Results, SortedAsc),
